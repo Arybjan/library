@@ -9,3 +9,10 @@ class UserAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+
+
+class GendersAdmin(admin.ModelAdmin):
+    list_display = ["id", "name"]
+
+
+admin.site.register(models.Genders, GendersAdmin)

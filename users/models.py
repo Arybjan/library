@@ -12,7 +12,7 @@ class User(AbstractBaseUser):
     occupation = models.ForeignKey("users.Occupations", on_delete=models.CASCADE)
     city = models.ForeignKey("users.Cities", on_delete=models.CASCADE)
     role = models.ForeignKey("users.Roles", on_delete=models.CASCADE)
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(_("Время создания"))
 
     USERNAME_FIELD = "username"
 
