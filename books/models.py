@@ -45,7 +45,7 @@ class CountryLanguage(models.Model):
 
 
 class FavoriteBooks(models.Model):
-    user = models.ForeignKey("users,User", on_delete=models.CASCADE)
+    user = models.ForeignKey("users.User", on_delete=models.CASCADE)
     book = models.ForeignKey("books.Book", on_delete=models.CASCADE)
     created_at = models.DateTimeField(_("Время создания"))
 
