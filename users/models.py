@@ -4,14 +4,14 @@ from django.utils.translation import gettext_lazy as _
 
 
 class User(AbstractBaseUser):
-    full_name = models.CharField(_('ФИО'), max_length=250)
-    username = models.CharField(max_length=150)
+    full_name = models.CharField(_("ФИО"), max_length=250)
+    username = models.CharField(_("Имя пользователя"), max_length=150)
     email = models.EmailField(_("Почта"), unique=True)
-    birthday_date = models.DateField()
-    gender_id = models.ForeignKey("users.Genders", on_delete=models.SET_NULL, null=True)
-    occupation_id = models.ForeignKey("", on_delete=models.CASCADE)
-    city_id = models.ForeignKey("", on_delete=models.CASCADE)
-    role_id = models.ForeignKey("", on_delete=models.CASCADE)
+    birthday_date = models.DateField(_("День рождения"))
+    gender = models.ForeignKey("users.Genders", on_delete=models.SET_NULL, null=True)
+    occupation = models.ForeignKey("users.Occupations", on_delete=models.CASCADE)
+    city = models.ForeignKey("users.Cities", on_delete=models.CASCADE)
+    role = models.ForeignKey("users.Roles", on_delete=models.CASCADE)
     created_at = models.DateTimeField()
 
     USERNAME_FIELD = "username"
@@ -34,7 +34,7 @@ class Roles(models.Model):
 
 class Cities(models.Model):
     name = models.CharField(_("Город"), max_length=100)
-    country_id = models.ForeignKey("users.Counrty", on_delete=models.CASCADE)
+    country = models.ForeignKey("users.Country", on_delete=models.CASCADE)
 
 
 class Country(models.Model):
