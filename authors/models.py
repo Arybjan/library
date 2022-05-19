@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Author(models.Model):
-    name = models.CharField(_(""), max_length=70)
+    name = models.CharField(_("ФИО"), max_length=70)
     birthday_date = models.DateField(_("Дата рождения"))
     death_date = models.DateField(_("Дата смерти"))
     created_at = models.DateTimeField(_("Время создания"))
