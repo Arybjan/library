@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 
 class User(AbstractBaseUser):
     full_name = models.CharField(_("ФИО"), max_length=250)
-    username = models.CharField(_("Имя пользователя"), max_length=150)
+    username = models.CharField(_("Имя пользователя"), max_length=150, unique=True)
     email = models.EmailField(_("Почта"), unique=True)
     birthday_date = models.DateField(_("День рождения"))
     gender = models.ForeignKey("users.Genders", on_delete=models.SET_NULL, null=True)
