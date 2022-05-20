@@ -14,7 +14,7 @@ class ForumTopicSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class ForumPostReply(serializers.ModelSerializer):
+class ForumPostReplySerializer(serializers.ModelSerializer):
     class Meta:
         model = models.ForumPostReply
         fields = "__all__"
