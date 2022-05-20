@@ -2,13 +2,13 @@ from rest_framework import serializers
 from payments import models
 
 
-class PremiumPurchase(serializers.ModelSerializer):
+class PremiumPurchaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.PremiumPurchase
         fields = "__all__"
 
 
-class PaymentStatus(serializers.ModelSerializer):
+class PaymentStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.PaymentStatus
         fields = "__all__"
