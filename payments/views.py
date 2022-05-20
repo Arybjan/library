@@ -9,4 +9,4 @@ class PremiumPurchaseViewSet(viewsets.ModelViewSet):
 
 class PaymentStatusViewSet(viewsets.ModelViewSet):
     queryset = models.PaymentStatus.objects.all()
-    serializer_class = serializer.PremiumPurchaseSerializer
+    serializer_class = serializer.PaymentStatusSerializer
