@@ -17,6 +17,6 @@ class AuthorBookViewSet(viewsets.ModelViewSet):
     serializer_class = AuthorBookSerializer
 
 
-class FavoriteAuthors(viewsets.ModelViewSet):
+class FavoriteAuthorsViewSet(viewsets.ModelViewSet):
     queryset = models.FavoriteAuthors.objects.all()
     serializer_class = FavoriteAuthorsSerializer
