@@ -38,7 +38,7 @@ class CountryLanguageViewSet(viewsets.ModelViewSet):
 
 
 class FavoriteBooksViewSet(viewsets.ModelViewSet):
-    queryset = models.FavoriteBooks.oblects.all()
+    queryset = models.FavoriteBooks.objects.all()
     serializer_class = serializer.FavoriteBookSerializer
 
 
@@ -57,7 +57,7 @@ class DifficultyViewSet(viewsets.ModelViewSet):
     serializer_class = serializer.DifficultySerializer
 
 
-class BookCategory(viewsets.ModelViewSet):
+class BookCategoryViewSet(viewsets.ModelViewSet):
     queryset = models.BookCategory.objects.all()
     serializer_class = serializer.BookCategorySerializer
 
