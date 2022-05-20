@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'books.apps.BooksConfig',
+    'payments.apps.PaymentsConfig',
+    'forums.apps.ForumsConfig',
     'rest_framework',
 ]
 

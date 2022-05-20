@@ -7,7 +7,7 @@ class User(AbstractBaseUser):
     full_name = models.CharField(_("ФИО"), max_length=250)
     username = models.CharField(_("Имя пользователя"), max_length=150, unique=True)
     email = models.EmailField(_("Почта"), unique=True)
-    birthday_date = models.DateField(_("День рождения"))
+    birthday_date = models.DateField(_("Год рождения"))
     gender = models.ForeignKey("users.Genders", on_delete=models.SET_NULL, null=True)
     occupation = models.ForeignKey("users.Occupations", on_delete=models.CASCADE)
     city = models.ForeignKey("users.Cities", on_delete=models.CASCADE)
@@ -30,6 +30,12 @@ class Genders(models.Model):
 
 class Roles(models.Model):
     name = models.CharField(_("Роль"), max_length=150)
+
+
+class UserSubscription(models.Model):
+    follower = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True)
+    following = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True)
+    created_at = models.DateTimeField(_("Время создания"))
 
 
 class Cities(models.Model):

@@ -59,7 +59,7 @@ class Notes(models.Model):
     book_id = models.ForeignKey("books.Book", on_delete=models.CASCADE)
     page = models.IntegerField(_("Страница"))
     word_from = models.IntegerField(_("Слово от"))
-    word_to = models.IntegerField(_("Слово для"))
+    word_to = models.IntegerField(_("Слово дo"))
     comment = models.TextField(_("Комментарий"))
     # parent_note = models.ForeignKey("books.Notes", on_delete=models.CASCADE)
     created_at = models.DateTimeField(_("Время создания"))
