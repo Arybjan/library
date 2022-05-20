@@ -33,8 +33,8 @@ class Roles(models.Model):
 
 
 class UserSubscription(models.Model):
-    follower = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True)
-    following = models.ForeignKey("users.User", on_delete=models.SET_NULL, null=True)
+    follower = models.ForeignKey("users.User", related_name="follower", on_delete=models.SET_NULL, null=True)
+    following = models.ForeignKey("users.User", related_name="following", on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(_("Время создания"))
 
 

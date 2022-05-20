@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig',
     'payments.apps.PaymentsConfig',
     'forums.apps.ForumsConfig',
+    'authors.apps.AuthorsConfig',
     'rest_framework',
 ]
 
