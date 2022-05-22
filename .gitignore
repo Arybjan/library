@@ -1,2 +1,15 @@
 .env
 .idea
+authors/__pycache__/
+authors/migrations/__pycache__/
+books/__pycache__/
+books/migrations/__pycache__/
+payments/__pycache__/
+payments/migrations/__pycache__/
+forums/__pycache__/
+forums/migrations/__pycache__/
+authors/__pycache__/
+authors/migrations/__pycache__/
+users/__pycache__/
+users/migrations/__pycache__/
+library/__pycache__/

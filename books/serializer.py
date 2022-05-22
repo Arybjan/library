@@ -34,7 +34,7 @@ class BookGenreSerializer(serializers.ModelSerializer):
 
 class LanguageSerializer(serializers.ModelSerializer):
     class Meta:
-        models = models.Language
+        model = models.Language
         fields = "__all__"
 
 
