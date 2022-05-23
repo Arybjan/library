@@ -12,7 +12,7 @@ class ForumTopicViewSet(viewsets.ModelViewSet):
     serializer_class = serializer.ForumTopicSerializer
 
 
-class ForumPostReply(viewsets.ModelViewSet):
+class ForumPostReplyViewSet(viewsets.ModelViewSet):
     queryset = models.ForumPostReply.objects.all()
     serializer_class = serializer.ForumPostReplySerializer
 
